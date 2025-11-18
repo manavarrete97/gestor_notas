@@ -40,6 +40,15 @@ builder.Services.AddScoped<gestor_notas.Manager.Interface.IGetMateriaManager, ge
 builder.Services.AddScoped<gestor_notas.Manager.Interface.IPostMateriaManager, gestor_notas.Manager.PostMateriaManager>();
 builder.Services.AddScoped<gestor_notas.Manager.Interface.IUpdateMateriaManager, gestor_notas.Manager.UpdateMateriaManager>();
 builder.Services.AddScoped<gestor_notas.Manager.Interface.IDeleteMateriaManager, gestor_notas.Manager.DeleteMateriaManager>();
+// Register Nota dependencies
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IGetNotaDAO, gestor_notas.DAO.GetNotaDAO>();
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IPostNotaDAO, gestor_notas.DAO.PostNotaDAO>();
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IUpdateNotaDAO, gestor_notas.DAO.UpdateNotaDAO>();
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IDeleteNotaDAO, gestor_notas.DAO.DeleteNotaDAO>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IGetNotaManager, gestor_notas.Manager.GetNotaManager>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IPostNotaManager, gestor_notas.Manager.PostNotaManager>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IUpdateNotaManager, gestor_notas.Manager.UpdateNotaManager>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IDeleteNotaManager, gestor_notas.Manager.DeleteNotaManager>();
 
 var app = builder.Build();
 
