@@ -161,6 +161,54 @@ Replace `5000` with the actual port where the API is running.
 
 ---
 
+###4. **Profesor**
+
+#### **GET** `/Profesor`
+- **Description**: Retrieves a list of all professors or a specific professor by ID.
+- **Query Parameters**:
+ - `id` (optional): The ID of the professor to retrieve.
+- **Response**:
+ - If `id` is provided, returns the professor with the specified ID.
+ - If `id` is not provided, returns all professors.
+- **Example**:
+ - Request: `GET http://localhost:5000/api/Profesor`
+ - Request: `GET http://localhost:5000/api/Profesor?id=1`
+
+#### **POST** `/Profesor`
+- **Description**: Adds a new professor.
+- **Body**:
+```json
+{
+ "nombre": "Dr. Smith"
+}
+```
+- **Response**: Confirmation message.
+- **Example**:
+ - Request: `POST http://localhost:5000/api/Profesor`
+
+#### **PUT** `/Profesor`
+- **Description**: Updates an existing professor.
+- **Body**:
+```json
+{
+ "id":1,
+ "nombre": "Dr. John Smith"
+}
+```
+- **Response**: Confirmation message.
+- **Example**:
+ - Request: `PUT http://localhost:5000/api/Profesor`
+
+#### **DELETE** `/Profesor`
+- **Description**: Deletes a professor by ID.
+- **Query Parameters**:
+ - `id`: The ID of the professor to delete.
+- **Response**: Confirmation message.
+- **Example**:
+ - Request: `DELETE http://localhost:5000/api/Profesor?id=1`
+
+---
+
 ## Notes
 - Replace `localhost:5000` with the actual host and port where the API is running.
 - Ensure that the required query parameters and body fields are provided for each request.
