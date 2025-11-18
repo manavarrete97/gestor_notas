@@ -159,6 +159,14 @@ Replace `5000` with the actual port where the API is running.
 - **Example**:
  - Request: `DELETE http://localhost:5000/api/Nota?idNota=1&idProfesor=2`
 
+#### **GET** `/Nota/details`
+- **Description**: Retrieves detailed information about a specific grade.
+- **Query Parameters**:
+ - `idNota`: The ID of the grade to retrieve details for.
+- **Response**: Detailed information about the grade, including associated student and subject.
+- **Example**:
+ - Request: `GET http://localhost:5000/api/Nota/details?idNota=1`
+
 ---
 
 ###4. **Profesor**
