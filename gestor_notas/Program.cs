@@ -31,6 +31,15 @@ builder.Services.AddScoped<gestor_notas.Manager.Interface.IDeleteEstudianteManag
 builder.Services.AddScoped<gestor_notas.DAO.Interface.IPostEstudianteDAO, gestor_notas.DAO.PostEstudianteDAO>();
 builder.Services.AddScoped<gestor_notas.DAO.Interface.IUpdateEstudianteDAO, gestor_notas.DAO.UpdateEstudianteDAO>();
 builder.Services.AddScoped<gestor_notas.DAO.Interface.IDeleteEstudianteDAO, gestor_notas.DAO.DeleteEstudianteDAO>();
+// Register Materia dependencies
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IGetMateriaDAO, gestor_notas.DAO.GetMateriaDAO>();
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IPostMateriaDAO, gestor_notas.DAO.PostMateriaDAO>();
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IUpdateMateriaDAO, gestor_notas.DAO.UpdateMateriaDAO>();
+builder.Services.AddScoped<gestor_notas.DAO.Interface.IDeleteMateriaDAO, gestor_notas.DAO.DeleteMateriaDAO>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IGetMateriaManager, gestor_notas.Manager.GetMateriaManager>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IPostMateriaManager, gestor_notas.Manager.PostMateriaManager>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IUpdateMateriaManager, gestor_notas.Manager.UpdateMateriaManager>();
+builder.Services.AddScoped<gestor_notas.Manager.Interface.IDeleteMateriaManager, gestor_notas.Manager.DeleteMateriaManager>();
 
 var app = builder.Build();
 
